@@ -27,6 +27,29 @@ except ImportError:
 
 DATA_FILE = "data.json"
 
+# ── Currency conversion ──────────────────────────────────────────────────────
+# Yahoo Finance returns values in the company's native reporting currency.
+# These rates convert to USD.  Update periodically if precision is critical.
+FX_TO_USD = {
+    "USD": 1.0,
+    "KRW": 1430.0,   # South Korean Won  (KRW per 1 USD)
+    "JPY": 155.0,    # Japanese Yen      (JPY per 1 USD)
+    "TWD": 32.5,     # Taiwan Dollar     (TWD per 1 USD)
+    "EUR": 0.917,    # Euro              (EUR per 1 USD)
+    "GBP": 0.79,     # British Pound     (GBP per 1 USD)
+    "HKD": 7.78,     # Hong Kong Dollar  (HKD per 1 USD)
+    "CNY": 7.20,     # Chinese Yuan      (CNY per 1 USD)
+}
+
+
+def to_usd(val, currency):
+    """Convert val from currency to USD.  Returns None if val is None."""
+    if val is None:
+        return None
+    ccy = (currency or "USD").upper()
+    rate = FX_TO_USD.get(ccy, 1.0)
+    return val / rate
+
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -90,6 +113,17 @@ def fetch_ticker(ticker):
     """
     t = yf.Ticker(ticker)
 
+    # Detect reporting currency (KRW, JPY, TWD, EUR, USD, etc.)
+    currency = "USD"
+    try:
+        currency = t.fast_info.currency or "USD"
+    except Exception:
+        try:
+            currency = t.info.get("currency", "USD") or "USD"
+        except Exception:
+            pass
+    currency = (currency or "USD").upper()
+
     # ── Income statement ──────────────────────────────────────────────────────
     inc = None
     for attr in ("quarterly_income_stmt", "quarterly_financials"):
@@ -112,10 +146,10 @@ def fetch_ticker(ticker):
 
     cols = inc.columns.tolist()   # sorted most-recent first
 
-    rev_curr = safe_float(inc.loc[rev_row, cols[0]])
-    rev_prev = safe_float(inc.loc[rev_row, cols[4]])   # same quarter, prior yr
-    oi_curr  = safe_float(inc.loc[oi_row,  cols[0]])
-    oi_prev  = safe_float(inc.loc[oi_row,  cols[4]])
+    rev_curr = to_usd(safe_float(inc.loc[rev_row, cols[0]]), currency)
+    rev_prev = to_usd(safe_float(inc.loc[rev_row, cols[4]]), currency)  # same quarter, prior yr
+    oi_curr  = to_usd(safe_float(inc.loc[oi_row,  cols[0]]), currency)
+    oi_prev  = to_usd(safe_float(inc.loc[oi_row,  cols[4]]), currency)
 
     if not rev_curr:
         return None
@@ -142,13 +176,15 @@ def fetch_ticker(ticker):
                 continue
             cf_cols = cf.columns.tolist()
             if len(cf_cols) >= 4:
-                capex_ttm = abs(
+                raw_ttm = abs(
                     sum(safe_float(cf.loc[cap_row, c]) or 0.0 for c in cf_cols[:4])
                 )
+                capex_ttm = to_usd(raw_ttm, currency)
             if len(cf_cols) >= 8:
-                capex_prev_ttm = abs(
+                raw_prev = abs(
                     sum(safe_float(cf.loc[cap_row, c]) or 0.0 for c in cf_cols[4:8])
                 )
+                capex_prev_ttm = to_usd(raw_prev, currency)
             break
         except Exception:
             pass
