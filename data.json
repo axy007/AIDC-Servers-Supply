@@ -6,8 +6,8 @@
     "update_note": "Data sourced from latest earnings reports and supply chain intelligence as of March 2026"
   },
   "tier_legend": {
-    "T1": "Primary Components — the actual products procured and deployed in data centers",
-    "T2": "Sub-Components & Supply Chain Inputs — what goes inside T1 components; tracked for upstream risk"
+    "T1": "Primary Components \u2014 the actual products procured and deployed in data centers",
+    "T2": "Sub-Components & Supply Chain Inputs \u2014 what goes inside T1 components; tracked for upstream risk"
   },
   "components": [
     {
@@ -15,7 +15,7 @@
       "name": "GPU Boards",
       "icon": "chip",
       "overall_status": "red",
-      "headline": "Critical — Blackwell sold out through mid-2026; HBM3E & CoWoS bottlenecks persist into 2028; CPUs tightening",
+      "headline": "Critical \u2014 Blackwell sold out through mid-2026; HBM3E & CoWoS bottlenecks persist into 2028; CPUs tightening",
       "subcomponents": [
         {
           "tier": "T1",
@@ -23,7 +23,7 @@
           "status": "red",
           "shortage_level": 90,
           "supply_sufficient": "2027",
-          "duration_label": "18–24 months",
+          "duration_label": "18\u201324 months",
           "shortage_summary": "Sold out through mid-2026 with a 3.6M unit backlog; constrained by CoWoS packaging and HBM3E allocation."
         },
         {
@@ -32,7 +32,7 @@
           "status": "yellow",
           "shortage_level": 50,
           "supply_sufficient": "Q4 2026",
-          "duration_label": "9–12 months",
+          "duration_label": "9\u201312 months",
           "shortage_summary": "Supply improving as Blackwell ramps, but sustained demand from customers unable to access Blackwell keeps lead times elevated."
         },
         {
@@ -42,7 +42,7 @@
           "shortage_level": 25,
           "supply_sufficient": "Adequate now",
           "duration_label": "No critical shortage",
-          "shortage_summary": "Supply broadly adequate; MI300X uses HBM3 (not HBM3E) and faces less CoWoS pressure than NVIDIA — ROCm adoption the bigger constraint."
+          "shortage_summary": "Supply broadly adequate; MI300X uses HBM3 (not HBM3E) and faces less CoWoS pressure than NVIDIA \u2014 ROCm adoption the bigger constraint."
         },
         {
           "tier": "T1",
@@ -50,8 +50,8 @@
           "status": "yellow",
           "shortage_level": 45,
           "supply_sufficient": "Q3 2026",
-          "duration_label": "6–9 months",
-          "shortage_summary": "High-core-count SKUs (60-core+) constrained for AI server builds; lead times extended to 16–20 weeks as AI server demand accelerates."
+          "duration_label": "6\u20139 months",
+          "shortage_summary": "High-core-count SKUs (60-core+) constrained for AI server builds; lead times extended to 16\u201320 weeks as AI server demand accelerates."
         },
         {
           "tier": "T1",
@@ -59,8 +59,8 @@
           "status": "yellow",
           "shortage_level": 40,
           "supply_sufficient": "Q4 2026",
-          "duration_label": "6–9 months",
-          "shortage_summary": "Turin 128-core SKUs face supply tightness as TSMC N4 wafer allocation prioritizes GPU production; lead times at 14–18 weeks."
+          "duration_label": "6\u20139 months",
+          "shortage_summary": "Turin 128-core SKUs face supply tightness as TSMC N4 wafer allocation prioritizes GPU production; lead times at 14\u201318 weeks."
         },
         {
           "tier": "T2",
@@ -68,7 +68,7 @@
           "status": "red",
           "shortage_level": 85,
           "supply_sufficient": "H2 2027",
-          "duration_label": "18–24 months",
+          "duration_label": "18\u201324 months",
           "shortage_summary": "Running 20% below 2026 demand at 75K wafers/month; scaling to 130K by late 2026, but demand growth means consistent sufficiency not until H2 2027."
         },
         {
@@ -78,16 +78,16 @@
           "shortage_level": 95,
           "supply_sufficient": "2028",
           "duration_label": "24+ months",
-          "shortage_summary": "All suppliers fully contracted through 2026 and much of 2027; new HBM fab capacity takes 2+ years — analyst consensus is consistent sufficiency in 2028."
+          "shortage_summary": "All suppliers fully contracted through 2026 and much of 2027; new HBM fab capacity takes 2+ years \u2014 analyst consensus is consistent sufficiency in 2028."
         },
         {
           "tier": "T2",
           "name": "TSMC 3nm / 5nm Wafer Fabrication",
           "status": "yellow",
           "shortage_level": 60,
-          "supply_sufficient": "2027–2028",
-          "duration_label": "18–24 months",
-          "shortage_summary": "N3/N4/N5 fully allocated; TSMC Arizona N4 ramping but insufficient to relieve Taiwan — consistent sufficiency tied to N2 node ramp in 2027–2028."
+          "supply_sufficient": "2027\u20132028",
+          "duration_label": "18\u201324 months",
+          "shortage_summary": "N3/N4/N5 fully allocated; TSMC Arizona N4 ramping but insufficient to relieve Taiwan \u2014 consistent sufficiency tied to N2 node ramp in 2027\u20132028."
         },
         {
           "tier": "T2",
@@ -95,8 +95,8 @@
           "status": "yellow",
           "shortage_level": 50,
           "supply_sufficient": "Q4 2026",
-          "duration_label": "9–12 months",
-          "shortage_summary": "High-layer-count GPU board substrates at 16–20 week lead times; TTM Technologies and Unimicron adding capacity through mid-2026."
+          "duration_label": "9\u201312 months",
+          "shortage_summary": "High-layer-count GPU board substrates at 16\u201320 week lead times; TTM Technologies and Unimicron adding capacity through mid-2026."
         }
       ],
       "supply_chain": [
@@ -106,7 +106,7 @@
           "notes": "NVIDIA holds >80% AI GPU market share"
         },
         {
-          "stage": "Wafer Fabrication (3–5nm)",
+          "stage": "Wafer Fabrication (3\u20135nm)",
           "player": "TSMC",
           "notes": "N3/N4/N5 fully allocated; Arizona ramp not yet material"
         },
@@ -118,7 +118,7 @@
         {
           "stage": "Advanced Packaging (CoWoS)",
           "player": "TSMC",
-          "notes": "Binding bottleneck — 20% shortfall vs. demand; H2 2027 relief"
+          "notes": "Binding bottleneck \u2014 20% shortfall vs. demand; H2 2027 relief"
         },
         {
           "stage": "Board & System Integration",
@@ -157,16 +157,16 @@
           "earnings_date": "Jan 2026",
           "earnings_period": "Q ending Dec 2025",
           "revenue": "$1.0T",
-          "revenue_growth": 26,
-          "operating_income": "$18.2B",
-          "profit_growth": 35,
+          "revenue_growth": 20,
+          "operating_income": "$5.6e+02B",
+          "profit_growth": 33,
           "capex": "$1.3T",
           "capex_growth": 30,
           "gross_margin_pct": 62,
           "capacity_expansion": "VERY HIGH",
-          "growth_reason": "AI chip surge driving N3/N4 revenue; CoWoS sold out; capex raised to record $52–56B for 2026 expansion",
-          "oi_margin_pct": 54,
-          "oi_margin_chg_pp": 5
+          "growth_reason": "AI chip surge driving N3/N4 revenue; CoWoS sold out; capex raised to record $52\u201356B for 2026 expansion",
+          "oi_margin_pct": null,
+          "oi_margin_chg_pp": null
         },
         {
           "name": "AMD",
@@ -183,7 +183,7 @@
           "gross_margin_pct": 51,
           "capacity_expansion": "HIGH",
           "growth_reason": "MI300X/MI325X hyperscaler traction + EPYC Turin fastest-ramping CPU in AMD history; data center ~50% of revenue",
-          "oi_margin_pct": 18,
+          "oi_margin_pct": 18.0,
           "oi_margin_chg_pp": 3.5
         },
         {
@@ -192,17 +192,17 @@
           "role": "HBM3E Memory (Primary)",
           "earnings_date": "Jan 2026",
           "earnings_period": "Q ending Sep 2025",
-          "revenue": "$23.0B",
-          "revenue_growth": 63,
-          "operating_income": "$13.4B",
+          "revenue": "$24.4T",
+          "revenue_growth": 39,
+          "operating_income": "$11.4T",
           "profit_growth": 62,
           "capex": "$23.8T",
           "capex_growth": 42,
           "gross_margin_pct": 65,
           "capacity_expansion": "HIGH",
           "growth_reason": "HBM revenue doubled YoY; holds ~70% of NVIDIA's HBM4 allocation; all 2026 and much of 2027 production already contracted",
-          "oi_margin_pct": 58,
-          "oi_margin_chg_pp": 17
+          "oi_margin_pct": 46.7,
+          "oi_margin_chg_pp": 6.6
         },
         {
           "name": "Micron Technology",
@@ -229,7 +229,7 @@
       "name": "Memory & Storage",
       "icon": "memory",
       "overall_status": "yellow",
-      "headline": "Watch List — High-density DDR5 RDIMMs constrained through 2028 as fabs prioritize HBM; NVMe & CXL supply adequate; HBM itself tracked within GPU Boards",
+      "headline": "Watch List \u2014 High-density DDR5 RDIMMs constrained through 2028 as fabs prioritize HBM; NVMe & CXL supply adequate; HBM itself tracked within GPU Boards",
       "subcomponents": [
         {
           "tier": "T1",
@@ -237,12 +237,12 @@
           "status": "yellow",
           "shortage_level": 55,
           "supply_sufficient": "2028",
-          "duration_label": "18–24 months",
-          "shortage_summary": "High-density server DIMMs constrained as Samsung, SK Hynix, and Micron divert DRAM fab capacity to HBM3E, which commands 5–8× the ASP per die. 256GB+ modules at 16–20 week lead times."
+          "duration_label": "18\u201324 months",
+          "shortage_summary": "High-density server DIMMs constrained as Samsung, SK Hynix, and Micron divert DRAM fab capacity to HBM3E, which commands 5\u20138\u00d7 the ASP per die. 256GB+ modules at 16\u201320 week lead times."
         },
         {
           "tier": "T1",
-          "name": "Enterprise NVMe SSDs (U.2 / E3.S, 15–30TB)",
+          "name": "Enterprise NVMe SSDs (U.2 / E3.S, 15\u201330TB)",
           "status": "green",
           "shortage_level": 18,
           "supply_sufficient": "Adequate now",
@@ -263,8 +263,8 @@
           "name": "DDR5 DRAM Die (High-Bandwidth Server Configurations)",
           "status": "yellow",
           "shortage_level": 45,
-          "supply_sufficient": "2027–2028",
-          "duration_label": "12–24 months",
+          "supply_sufficient": "2027\u20132028",
+          "duration_label": "12\u201324 months",
           "shortage_summary": "All three major DRAM makers (Samsung, SK Hynix, Micron) prioritizing HBM3E over DDR5 due to dramatically higher margins. Constrains high-density DIMM supply through 2027."
         },
         {
@@ -286,12 +286,12 @@
         {
           "stage": "NAND Flash Design & Fabrication",
           "player": "Samsung / Kioxia / Micron / SK Hynix / WD",
-          "notes": "Global oversupply; prices recovering from 2024 trough — not a bottleneck"
+          "notes": "Global oversupply; prices recovering from 2024 trough \u2014 not a bottleneck"
         },
         {
           "stage": "NVMe SSD Assembly",
           "player": "Samsung / Kioxia / Micron / WD / SK Hynix",
-          "notes": "Vertically integrated; supply tracks NAND availability — adequate"
+          "notes": "Vertically integrated; supply tracks NAND availability \u2014 adequate"
         },
         {
           "stage": "CXL Controller & Module Assembly",
@@ -329,17 +329,17 @@
           "role": "DDR5 RDIMMs, NAND & NVMe SSDs",
           "earnings_date": "Jan 2026",
           "earnings_period": "Q ending Dec 2025",
-          "revenue": "$65.6B",
+          "revenue": "$93.8T",
           "revenue_growth": 24,
-          "operating_income": "$14.1B",
-          "profit_growth": 207,
+          "operating_income": "$20.1T",
+          "profit_growth": 209,
           "capex": "$52.2T",
           "capex_growth": 5,
           "gross_margin_pct": 47,
           "capacity_expansion": "HIGH",
           "growth_reason": "HBM3 ramp lagging SK Hynix; legacy DRAM/NAND oversupply pressuring margins; investing heavily in HBM4 and advanced packaging to close competitive gap",
           "oi_margin_pct": 21.4,
-          "oi_margin_chg_pp": 13
+          "oi_margin_chg_pp": 12.8
         },
         {
           "name": "SK Hynix",
@@ -347,17 +347,17 @@
           "role": "DDR5 RDIMMs & NAND (HBM tracked in GPU Boards)",
           "earnings_date": "Jan 2026",
           "earnings_period": "Q ending Sep 2025",
-          "revenue": "$23.0B",
-          "revenue_growth": 63,
-          "operating_income": "$13.4B",
+          "revenue": "$24.4T",
+          "revenue_growth": 39,
+          "operating_income": "$11.4T",
           "profit_growth": 62,
           "capex": "$23.8T",
           "capex_growth": 42,
           "gross_margin_pct": 65,
           "capacity_expansion": "HIGH",
           "growth_reason": "HBM dominance lifting all memory margins; DDR5 server DRAM benefiting from AI server build-out; NAND recovering from 2024 oversupply trough",
-          "oi_margin_pct": 58,
-          "oi_margin_chg_pp": 17
+          "oi_margin_pct": 46.7,
+          "oi_margin_chg_pp": 6.6
         },
         {
           "name": "Kioxia",
@@ -375,7 +375,7 @@
           "capacity_expansion": "MODERATE",
           "growth_reason": "NAND recovery from 2024 trough; AI storage demand (training datasets, KV cache) driving enterprise SSD growth; Yokkaichi and Kitakami fabs ramping BiCS8",
           "oi_margin_pct": 26.3,
-          "oi_margin_chg_pp": 4
+          "oi_margin_chg_pp": 4.1
         },
         {
           "name": "Western Digital",
@@ -402,7 +402,7 @@
       "name": "Scale-Out Networking",
       "icon": "network",
       "overall_status": "yellow",
-      "headline": "Moderate — EML laser is the critical sub-component; Ethernet switches ramping; InfiniBand supply easing",
+      "headline": "Moderate \u2014 EML laser is the critical sub-component; Ethernet switches ramping; InfiniBand supply easing",
       "subcomponents": [
         {
           "tier": "T1",
@@ -410,7 +410,7 @@
           "status": "yellow",
           "shortage_level": 60,
           "supply_sufficient": "H1 2027",
-          "duration_label": "12–15 months",
+          "duration_label": "12\u201315 months",
           "shortage_summary": "Tomahawk 6-based systems entering volume Q2 2026 but Broadcom's $73B backlog means consistent supply not before H1 2027."
         },
         {
@@ -420,7 +420,7 @@
           "shortage_level": 20,
           "supply_sufficient": "Adequate now",
           "duration_label": "Largely resolved",
-          "shortage_summary": "2024–2025 silicon constraints resolved; market also shifting toward Ethernet for new builds, moderating InfiniBand demand."
+          "shortage_summary": "2024\u20132025 silicon constraints resolved; market also shifting toward Ethernet for new builds, moderating InfiniBand demand."
         },
         {
           "tier": "T1",
@@ -429,7 +429,7 @@
           "shortage_level": 78,
           "supply_sufficient": "2028",
           "duration_label": "24+ months",
-          "shortage_summary": "NVIDIA pre-allocated Lumentum's EML laser capacity through 2027; InP fab expansion takes 2–3 years — consistent sufficiency 2028."
+          "shortage_summary": "NVIDIA pre-allocated Lumentum's EML laser capacity through 2027; InP fab expansion takes 2\u20133 years \u2014 consistent sufficiency 2028."
         },
         {
           "tier": "T1",
@@ -437,8 +437,8 @@
           "status": "yellow",
           "shortage_level": 50,
           "supply_sufficient": "Q4 2026",
-          "duration_label": "9–12 months",
-          "shortage_summary": "NVIDIA NIC production competing for TSMC allocation vs. GPU priority; lead times at 20–26 weeks."
+          "duration_label": "9\u201312 months",
+          "shortage_summary": "NVIDIA NIC production competing for TSMC allocation vs. GPU priority; lead times at 20\u201326 weeks."
         },
         {
           "tier": "T2",
@@ -446,7 +446,7 @@
           "status": "yellow",
           "shortage_level": 60,
           "supply_sufficient": "H1 2027",
-          "duration_label": "12–15 months",
+          "duration_label": "12\u201315 months",
           "shortage_summary": "Broadcom Tomahawk 6 (102.4 Tb/s) in early ramp; both ASICs competing for TSMC N5/N6 alongside GPU production."
         },
         {
@@ -456,7 +456,7 @@
           "shortage_level": 82,
           "supply_sufficient": "2028",
           "duration_label": "24+ months",
-          "shortage_summary": "Lumentum is sole volume supplier; NVIDIA pre-allocated capacity through 2027 — other buyers face 25–30% supply gaps until new InP fabs come online."
+          "shortage_summary": "Lumentum is sole volume supplier; NVIDIA pre-allocated capacity through 2027 \u2014 other buyers face 25\u201330% supply gaps until new InP fabs come online."
         },
         {
           "tier": "T2",
@@ -464,7 +464,7 @@
           "status": "yellow",
           "shortage_level": 55,
           "supply_sufficient": "H2 2026",
-          "duration_label": "6–9 months",
+          "duration_label": "6\u20139 months",
           "shortage_summary": "Growing as EML alternative for 800G/1.6T; Intel, Broadcom and Marvell all expanding SiPh capacity through 2026."
         }
       ],
@@ -477,12 +477,12 @@
         {
           "stage": "Switch ASIC Fabrication",
           "player": "TSMC",
-          "notes": "N5/N6 — competing with GPU production for capacity"
+          "notes": "N5/N6 \u2014 competing with GPU production for capacity"
         },
         {
           "stage": "EML Laser Dies",
           "player": "Lumentum / Coherent / Mitsubishi",
-          "notes": "Critical bottleneck — NVIDIA pre-allocated Lumentum through 2027"
+          "notes": "Critical bottleneck \u2014 NVIDIA pre-allocated Lumentum through 2027"
         },
         {
           "stage": "Transceiver Module Assembly",
@@ -598,7 +598,7 @@
       "name": "Scale-Up Networking",
       "icon": "cpu",
       "overall_status": "yellow",
-      "headline": "Moderate — NVSwitch/NVLink constrained as part of Blackwell system; PCIe Gen 6 retimers tight",
+      "headline": "Moderate \u2014 NVSwitch/NVLink constrained as part of Blackwell system; PCIe Gen 6 retimers tight",
       "subcomponents": [
         {
           "tier": "T1",
@@ -606,8 +606,8 @@
           "status": "yellow",
           "shortage_level": 60,
           "supply_sufficient": "2027",
-          "duration_label": "12–18 months",
-          "shortage_summary": "Constrained as part of the NVL72 Blackwell rack — not a standalone bottleneck, but availability tied to the full GPU system backlog."
+          "duration_label": "12\u201318 months",
+          "shortage_summary": "Constrained as part of the NVL72 Blackwell rack \u2014 not a standalone bottleneck, but availability tied to the full GPU system backlog."
         },
         {
           "tier": "T1",
@@ -616,7 +616,7 @@
           "shortage_level": 20,
           "supply_sufficient": "Adequate now",
           "duration_label": "No shortage",
-          "shortage_summary": "Passive copper assemblies from multiple qualified vendors (Amphenol, TE, Luxshare) — supply tracks GPU system availability."
+          "shortage_summary": "Passive copper assemblies from multiple qualified vendors (Amphenol, TE, Luxshare) \u2014 supply tracks GPU system availability."
         },
         {
           "tier": "T1",
@@ -624,7 +624,7 @@
           "status": "yellow",
           "shortage_level": 48,
           "supply_sufficient": "H2 2026",
-          "duration_label": "9–12 months",
+          "duration_label": "9\u201312 months",
           "shortage_summary": "Gen 6 HBAs entering volume in 2026; supply chain early-ramp with moderate tightness for composable GPU architecture deployments."
         },
         {
@@ -634,7 +634,7 @@
           "shortage_level": 20,
           "supply_sufficient": "Adequate now",
           "duration_label": "No shortage",
-          "shortage_summary": "Integrated on-package interconnect — no separate supply risk beyond MI300X GPU availability itself."
+          "shortage_summary": "Integrated on-package interconnect \u2014 no separate supply risk beyond MI300X GPU availability itself."
         },
         {
           "tier": "T2",
@@ -642,8 +642,8 @@
           "status": "yellow",
           "shortage_level": 55,
           "supply_sufficient": "2027",
-          "duration_label": "12–18 months",
-          "shortage_summary": "Fabricated at TSMC N4 alongside GPU dies — derivative shortage of overall GPU fab constraints."
+          "duration_label": "12\u201318 months",
+          "shortage_summary": "Fabricated at TSMC N4 alongside GPU dies \u2014 derivative shortage of overall GPU fab constraints."
         },
         {
           "tier": "T2",
@@ -651,7 +651,7 @@
           "status": "yellow",
           "shortage_level": 50,
           "supply_sufficient": "H2 2026",
-          "duration_label": "9–12 months",
+          "duration_label": "9\u201312 months",
           "shortage_summary": "Astera Labs sole-sourced on key hyperscaler PCIe Gen 6 retimer designs; CXL memory expansion adding to load."
         },
         {
@@ -668,17 +668,17 @@
         {
           "stage": "NVSwitch Architecture",
           "player": "NVIDIA",
-          "notes": "NVSwitch 5 — 1.8 TB/sec per port; proprietary NVIDIA design"
+          "notes": "NVSwitch 5 \u2014 1.8 TB/sec per port; proprietary NVIDIA design"
         },
         {
           "stage": "NVSwitch Fabrication",
           "player": "TSMC",
-          "notes": "N4 node — same constraints as GPU die fab"
+          "notes": "N4 node \u2014 same constraints as GPU die fab"
         },
         {
           "stage": "NVLink Cables",
           "player": "Amphenol / TE Connectivity / Luxshare",
-          "notes": "Passive copper — adequate supply from multiple vendors"
+          "notes": "Passive copper \u2014 adequate supply from multiple vendors"
         },
         {
           "stage": "PCIe / CXL Switch ASICs",
@@ -706,7 +706,7 @@
           "capex_growth": 35,
           "gross_margin_pct": 75,
           "capacity_expansion": "HIGH",
-          "growth_reason": "NVL72 requires 2× NVSwitch per rack — NVSwitch revenue scales directly with Blackwell GPU shipment growth",
+          "growth_reason": "NVL72 requires 2\u00d7 NVSwitch per rack \u2014 NVSwitch revenue scales directly with Blackwell GPU shipment growth",
           "oi_margin_pct": 64.7,
           "oi_margin_chg_pp": 3.9
         },
@@ -735,7 +735,7 @@
       "name": "Cooling",
       "icon": "bolt",
       "overall_status": "yellow",
-      "headline": "Moderate-to-Critical — Cold plates and specialty coolants most constrained; CDU supply improving with aggressive capacity builds",
+      "headline": "Moderate-to-Critical \u2014 Cold plates and specialty coolants most constrained; CDU supply improving with aggressive capacity builds",
       "subcomponents": [
         {
           "tier": "T1",
@@ -743,8 +743,8 @@
           "status": "yellow",
           "shortage_level": 65,
           "supply_sufficient": "Q4 2026",
-          "duration_label": "9–12 months",
-          "shortage_summary": "Demand surged 156% YoY; Vertiv's 45× CDU capacity expansion and new nVent/Schneider facilities expected to normalize supply by Q4 2026."
+          "duration_label": "9\u201312 months",
+          "shortage_summary": "Demand surged 156% YoY; Vertiv's 45\u00d7 CDU capacity expansion and new nVent/Schneider facilities expected to normalize supply by Q4 2026."
         },
         {
           "tier": "T1",
@@ -752,7 +752,7 @@
           "status": "red",
           "shortage_level": 75,
           "supply_sufficient": "H1 2027",
-          "duration_label": "15–18 months",
+          "duration_label": "15\u201318 months",
           "shortage_summary": "GPU-generation-specific designs require re-qualification per SKU; precision CNC machining and liquid metal TIM availability are limiting production."
         },
         {
@@ -761,7 +761,7 @@
           "status": "yellow",
           "shortage_level": 55,
           "supply_sufficient": "Q3 2026",
-          "duration_label": "6–9 months",
+          "duration_label": "6\u20139 months",
           "shortage_summary": "Used for air-to-liquid transition in legacy facilities; stainless steel HX fabrication capacity constrained but expanding."
         },
         {
@@ -770,7 +770,7 @@
           "status": "yellow",
           "shortage_level": 60,
           "supply_sufficient": "Q4 2026",
-          "duration_label": "9–12 months",
+          "duration_label": "9\u201312 months",
           "shortage_summary": "Tank fabrication and facility integration complexity constrained; two-phase systems impacted by 3M Novec PFAS phase-out."
         },
         {
@@ -797,7 +797,7 @@
           "status": "yellow",
           "shortage_level": 55,
           "supply_sufficient": "Q4 2026",
-          "duration_label": "9–12 months",
+          "duration_label": "9\u201312 months",
           "shortage_summary": "Indium-gallium alloy TIMs for cold plate attachment constrained by global indium supply (competed by InP laser production)."
         },
         {
@@ -806,8 +806,8 @@
           "status": "yellow",
           "shortage_level": 58,
           "supply_sufficient": "Q4 2026",
-          "duration_label": "9–12 months",
-          "shortage_summary": "Grundfos and KSB industrial pumps at 16–24 week lead times; global demand surge from data centers, EVs, and semiconductor fabs competing simultaneously."
+          "duration_label": "9\u201312 months",
+          "shortage_summary": "Grundfos and KSB industrial pumps at 16\u201324 week lead times; global demand surge from data centers, EVs, and semiconductor fabs competing simultaneously."
         },
         {
           "tier": "T2",
@@ -815,8 +815,8 @@
           "status": "yellow",
           "shortage_level": 50,
           "supply_sufficient": "Q3 2026",
-          "duration_label": "6–9 months",
-          "shortage_summary": "Large centrifugal chillers at 18–26 week lead times from Carrier, Trane, York due to compressor sub-component availability."
+          "duration_label": "6\u20139 months",
+          "shortage_summary": "Large centrifugal chillers at 18\u201326 week lead times from Carrier, Trane, York due to compressor sub-component availability."
         }
       ],
       "supply_chain": [
@@ -828,7 +828,7 @@
         {
           "stage": "CDU Manufacturing",
           "player": "Vertiv / nVent / Schneider / Modine",
-          "notes": "45× Vertiv expansion in 2024; nVent new MN facility Q1 2026"
+          "notes": "45\u00d7 Vertiv expansion in 2024; nVent new MN facility Q1 2026"
         },
         {
           "stage": "Immersion Tank Fabrication",
@@ -843,12 +843,12 @@
         {
           "stage": "Chillers & Cooling Plant",
           "player": "Carrier / Trane / York",
-          "notes": "18–26 week lead times; compressor sub-supply constrained"
+          "notes": "18\u201326 week lead times; compressor sub-supply constrained"
         },
         {
           "stage": "Pumps & Heat Exchangers",
           "player": "Grundfos / KSB / Alfa Laval",
-          "notes": "16–24 week lead times; industrial-wide demand surge"
+          "notes": "16\u201324 week lead times; industrial-wide demand surge"
         }
       ],
       "suppliers": [
@@ -866,7 +866,7 @@
           "capex_growth": 28,
           "gross_margin_pct": 35,
           "capacity_expansion": "VERY HIGH",
-          "growth_reason": "Dominant CDU supplier; 45× CDU capacity expansion delivering; $9.5B backlog at 1.4× book-to-bill; AI now >60% of revenue",
+          "growth_reason": "Dominant CDU supplier; 45\u00d7 CDU capacity expansion delivering; $9.5B backlog at 1.4\u00d7 book-to-bill; AI now >60% of revenue",
           "oi_margin_pct": 20.9,
           "oi_margin_chg_pp": 1.4
         },
@@ -884,7 +884,7 @@
           "capex_growth": 32,
           "gross_margin_pct": 38,
           "capacity_expansion": "HIGH",
-          "growth_reason": "DC orders +65% organically; liquid cooling backlog 3× YoY; NVIDIA partner network; Blaine MN facility doubling footprint",
+          "growth_reason": "DC orders +65% organically; liquid cooling backlog 3\u00d7 YoY; NVIDIA partner network; Blaine MN facility doubling footprint",
           "oi_margin_pct": 14.9,
           "oi_margin_chg_pp": -0.2
         },
@@ -903,8 +903,8 @@
           "gross_margin_pct": 43,
           "capacity_expansion": "HIGH",
           "growth_reason": "Data center cooling is largest growth driver; North America Energy Management +17% YoY; liquid cooling RDHx/CDU orders surging",
-          "oi_margin_pct": 18.7,
-          "oi_margin_chg_pp": 1
+          "oi_margin_pct": 18.9,
+          "oi_margin_chg_pp": 1.0
         },
         {
           "name": "Modine Manufacturing",
@@ -921,8 +921,8 @@
           "gross_margin_pct": 22,
           "capacity_expansion": "HIGH",
           "growth_reason": "DC cooling +20% organic; hyperscaler wins via Airedale brand; $100M new liquid cooling manufacturing investment targeting Q3 2026 ops",
-          "oi_margin_pct": 12,
-          "oi_margin_chg_pp": 1
+          "oi_margin_pct": 12.0,
+          "oi_margin_chg_pp": 1.0
         }
       ]
     }
