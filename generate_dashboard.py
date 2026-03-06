@@ -31,7 +31,7 @@ def shortage_bar(level, status):
             f'<span class="shortage-pct" style="color:{color}">{level}%</span></div>')
 
 def comp_icon(icon):
-    return {'chip':'🖥️','network':'🌐','cpu':'⚡','bolt':'🌡️'}.get(icon,'📦')
+    return {'chip':'🖥️','network':'🌐','cpu':'⚡','bolt':'🌡️','memory':'💾'}.get(icon,'📦')
 
 def delta_cell(val, unit='%', threshold_hi=5, threshold_lo=0):
     if val is None:

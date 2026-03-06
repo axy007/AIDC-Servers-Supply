@@ -63,15 +63,6 @@
           "shortage_summary": "Turin 128-core SKUs face supply tightness as TSMC N4 wafer allocation prioritizes GPU production; lead times at 14\u201318 weeks."
         },
         {
-          "tier": "T1",
-          "name": "DDR5 System Memory (Server RDIMMs)",
-          "status": "yellow",
-          "shortage_level": 55,
-          "supply_sufficient": "2028",
-          "duration_label": "18\u201324 months",
-          "shortage_summary": "High-capacity server RDIMMs (256GB+) constrained as fabs divert capacity to HBM; analysts project consistent sufficiency not before 2028."
-        },
-        {
           "tier": "T2",
           "name": "CoWoS Advanced Packaging (TSMC)",
           "status": "red",
@@ -230,6 +221,179 @@
           "growth_reason": "HBM Q4 revenue near $2B; 100% of 2026 HBM contracted; data center DRAM now 56% of sales at premium pricing",
           "oi_margin_pct": 33.6,
           "oi_margin_chg_pp": 25.9
+        }
+      ]
+    },
+    {
+      "id": "memory_storage",
+      "name": "Memory & Storage",
+      "icon": "memory",
+      "overall_status": "yellow",
+      "headline": "Watch List \u2014 High-density DDR5 RDIMMs constrained through 2028 as fabs prioritize HBM; NVMe & CXL supply adequate; HBM itself tracked within GPU Boards",
+      "subcomponents": [
+        {
+          "tier": "T1",
+          "name": "DDR5 Server RDIMMs (256GB / 512GB High-Density)",
+          "status": "yellow",
+          "shortage_level": 55,
+          "supply_sufficient": "2028",
+          "duration_label": "18\u201324 months",
+          "shortage_summary": "High-density server DIMMs constrained as Samsung, SK Hynix, and Micron divert DRAM fab capacity to HBM3E, which commands 5\u20138\u00d7 the ASP per die. 256GB+ modules at 16\u201320 week lead times."
+        },
+        {
+          "tier": "T1",
+          "name": "Enterprise NVMe SSDs (U.2 / E3.S, 15\u201330TB)",
+          "status": "green",
+          "shortage_level": 18,
+          "supply_sufficient": "Adequate now",
+          "duration_label": "No shortage",
+          "shortage_summary": "NAND flash in global oversupply; enterprise SSDs broadly available. AI training datasets and KV-cache storage are driving strong demand but supply is keeping pace comfortably."
+        },
+        {
+          "tier": "T1",
+          "name": "CXL Memory Modules (CXL 2.0 / 3.0)",
+          "status": "green",
+          "shortage_level": 20,
+          "supply_sufficient": "Adequate now",
+          "duration_label": "Market forming",
+          "shortage_summary": "Supply building ahead of demand; hyperscaler CXL deployments still nascent in 2026. Micron CZ120 and Samsung CMM modules available but not yet in volume production at scale."
+        },
+        {
+          "tier": "T2",
+          "name": "DDR5 DRAM Die (High-Bandwidth Server Configurations)",
+          "status": "yellow",
+          "shortage_level": 45,
+          "supply_sufficient": "2027\u20132028",
+          "duration_label": "12\u201324 months",
+          "shortage_summary": "All three major DRAM makers (Samsung, SK Hynix, Micron) prioritizing HBM3E over DDR5 due to dramatically higher margins. Constrains high-density DIMM supply through 2027."
+        },
+        {
+          "tier": "T2",
+          "name": "NAND Flash (TLC / QLC Enterprise Grade)",
+          "status": "green",
+          "shortage_level": 15,
+          "supply_sufficient": "Adequate now",
+          "duration_label": "No shortage",
+          "shortage_summary": "Structural oversupply through 2026; Samsung, Kioxia, and Micron running elevated inventory. Prices recovering from 2024 trough but supply is not a binding constraint."
+        }
+      ],
+      "supply_chain": [
+        {
+          "stage": "DDR5 DRAM Design & Fabrication",
+          "player": "Samsung / SK Hynix / Micron",
+          "notes": "All three prioritizing HBM3E over DDR5; high-density DIMM supply constrained"
+        },
+        {
+          "stage": "NAND Flash Design & Fabrication",
+          "player": "Samsung / Kioxia / Micron / SK Hynix / WD",
+          "notes": "Global oversupply; prices recovering from 2024 trough \u2014 not a bottleneck"
+        },
+        {
+          "stage": "NVMe SSD Assembly",
+          "player": "Samsung / Kioxia / Micron / WD / SK Hynix",
+          "notes": "Vertically integrated; supply tracks NAND availability \u2014 adequate"
+        },
+        {
+          "stage": "CXL Controller & Module Assembly",
+          "player": "Micron / Samsung / Astera Labs",
+          "notes": "CXL 2.0/3.0 memory pooling; supply ahead of hyperscaler adoption curve"
+        },
+        {
+          "stage": "Server DIMM Module Assembly",
+          "player": "Samsung / SK Hynix / Micron",
+          "notes": "Vertically integrated memory makers; bottleneck is die allocation, not assembly"
+        }
+      ],
+      "suppliers": [
+        {
+          "name": "Micron Technology",
+          "ticker": "MU",
+          "role": "DDR5 RDIMMs, NAND & CXL Modules",
+          "earnings_date": "Dec 2025",
+          "earnings_period": "FY Q4 2025",
+          "revenue": "$11.3B",
+          "revenue_growth": 46,
+          "operating_income": "$3.8B",
+          "profit_growth": 538,
+          "capex": "$20.0B",
+          "capex_growth": 30,
+          "gross_margin_pct": 38,
+          "capacity_expansion": "HIGH",
+          "growth_reason": "Data center DRAM (DDR5 + HBM) now 56% of revenue; CXL memory modules entering hyperscaler qualification; $20B capex expanding Boise and Singapore fabs",
+          "oi_margin_pct": 33.6,
+          "oi_margin_chg_pp": 25.9
+        },
+        {
+          "name": "Samsung Electronics",
+          "ticker": "005930.KS",
+          "role": "DDR5 RDIMMs, NAND & NVMe SSDs",
+          "earnings_date": "Jan 2026",
+          "earnings_period": "Q4 FY2025",
+          "revenue": "$52.5B",
+          "revenue_growth": 11,
+          "operating_income": "$6.5B",
+          "profit_growth": -29,
+          "capex": "$40.0B",
+          "capex_growth": 5,
+          "gross_margin_pct": 36,
+          "capacity_expansion": "HIGH",
+          "growth_reason": "HBM3 ramp lagging SK Hynix; legacy DRAM/NAND oversupply pressuring margins; investing heavily in HBM4 and advanced packaging to close competitive gap",
+          "oi_margin_pct": 12.4,
+          "oi_margin_chg_pp": -8.1
+        },
+        {
+          "name": "SK Hynix",
+          "ticker": "000660.KS",
+          "role": "DDR5 RDIMMs & NAND (HBM tracked in GPU Boards)",
+          "earnings_date": "Jan 2026",
+          "earnings_period": "Q4 FY2025",
+          "revenue": "$28.5B",
+          "revenue_growth": 66,
+          "operating_income": "$9.2B",
+          "profit_growth": 137,
+          "capex": "$14.2B",
+          "capex_growth": 42,
+          "gross_margin_pct": 52,
+          "capacity_expansion": "HIGH",
+          "growth_reason": "HBM dominance lifting all memory margins; DDR5 server DRAM benefiting from AI server build-out; NAND recovering from 2024 oversupply trough",
+          "oi_margin_pct": 32.3,
+          "oi_margin_chg_pp": 9.7
+        },
+        {
+          "name": "Kioxia",
+          "ticker": "285A.T",
+          "role": "NAND Flash & Enterprise NVMe SSDs",
+          "earnings_date": "Feb 2026",
+          "earnings_period": "Q3 FY2025",
+          "revenue": "$3.8B",
+          "revenue_growth": 22,
+          "operating_income": "$320M",
+          "profit_growth": 145,
+          "capex": "$3.5B",
+          "capex_growth": 18,
+          "gross_margin_pct": 28,
+          "capacity_expansion": "MODERATE",
+          "growth_reason": "NAND recovery from 2024 trough; AI storage demand (training datasets, KV cache) driving enterprise SSD growth; Yokkaichi and Kitakami fabs ramping BiCS8",
+          "oi_margin_pct": 8.4,
+          "oi_margin_chg_pp": 6.2
+        },
+        {
+          "name": "Western Digital",
+          "ticker": "WDC",
+          "role": "Enterprise NVMe SSDs & NAND Flash",
+          "earnings_date": "Jan 2026",
+          "earnings_period": "Q2 FY2026",
+          "revenue": "$4.3B",
+          "revenue_growth": 41,
+          "operating_income": "$640M",
+          "profit_growth": 184,
+          "capex": "$0.7B",
+          "capex_growth": 12,
+          "gross_margin_pct": 38,
+          "capacity_expansion": "MODERATE",
+          "growth_reason": "Flash segment driven by AI enterprise SSD demand; cloud revenue +60% YoY; Ultrastar DC SN840 seeing strong data center adoption",
+          "oi_margin_pct": 14.9,
+          "oi_margin_chg_pp": 11.2
         }
       ]
     },
