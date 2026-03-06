@@ -1,0 +1,47 @@
+name: Refresh Dashboard
+
+on:
+  schedule:
+    - cron: '0 8 15 2,5,8,11 *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch latest supplier financials
+        run: python fetch_financials.py
+
+      - name: Regenerate dashboard HTML
+        run: python generate_dashboard.py
+
+      - name: Commit and push updates
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json index.html
+          if git diff --staged --quiet; then
+            echo "No financial changes detected — nothing to commit."
+          else
+            git commit -m "chore: auto-refresh financials $(date -u +'%Y-%m-%d')"
+            git push
+            echo "Dashboard updated and pushed."
+          fi
