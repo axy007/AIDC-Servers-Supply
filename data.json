@@ -156,17 +156,17 @@
           "role": "Wafer Fab & CoWoS Packaging",
           "earnings_date": "Jan 2026",
           "earnings_period": "Q ending Dec 2025",
-          "revenue": "$1.0T",
+          "revenue": "$32B",
           "revenue_growth": 20,
-          "operating_income": "$5.6e+02B",
+          "operating_income": "$17B",
           "profit_growth": 33,
-          "capex": "$1.3T",
+          "capex": "$39B",
           "capex_growth": 30,
           "gross_margin_pct": 62,
           "capacity_expansion": "VERY HIGH",
           "growth_reason": "AI chip surge driving N3/N4 revenue; CoWoS sold out; capex raised to record $52\u201356B for 2026 expansion",
-          "oi_margin_pct": null,
-          "oi_margin_chg_pp": null
+          "oi_margin_pct": 53.1,
+          "oi_margin_chg_pp": 5.2
         },
         {
           "name": "AMD",
