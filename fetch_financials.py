@@ -41,6 +41,13 @@ FX_TO_USD = {
     "CNY": 7.20,     # Chinese Yuan      (CNY per 1 USD)
 }
 
+# ── Ticker-specific currency overrides ──────────────────────────────────────
+# Some ADRs list in USD on a US exchange but file financials in their home
+# currency.  yfinance then returns currency = "USD" but values in TWD, etc.
+TICKER_CURRENCY_OVERRIDE = {
+    "TSM": "TWD",   # TSMC ADR on NYSE; TSMC files financials in TWD
+}
+
 
 def to_usd(val, currency):
     """Convert val from currency to USD.  Returns None if val is None."""
@@ -123,6 +130,9 @@ def fetch_ticker(ticker):
         except Exception:
             pass
     currency = (currency or "USD").upper()
+
+    # Apply any hardcoded override (ADR vs. home-currency mismatch)
+    currency = TICKER_CURRENCY_OVERRIDE.get(ticker.upper(), currency)
 
     # ── Income statement ──────────────────────────────────────────────────────
     inc = None
